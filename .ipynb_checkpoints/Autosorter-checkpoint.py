@@ -2,7 +2,7 @@ from random import shuffle
 
 
 # Import admin and participant data from txt file:
-with open('participants_test.txt', 'r') as party, open('admins_test.txt', 'r') as adminlist, open('standby_test.txt', 'r') as standby:
+with open('participants.txt', 'r') as party, open('admins.txt', 'r') as adminlist, open('standby.txt', 'r') as standby:
     participants = party.read().split('\n')
     admins = adminlist.read().split('\n')
     standby = standby.read().split('\n')
