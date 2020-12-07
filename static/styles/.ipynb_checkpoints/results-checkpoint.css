@@ -2,6 +2,7 @@
    box-sizing : border-box;
 }
 
+
 body {
     height: 100vh;
     overflow: hidden;
@@ -16,7 +17,11 @@ body {
 }
 
 table {
-    border-style: groove; border-width: 7px; width:100%; color:orange; border-color: coral; text-align: center
+    border-style: groove; 
+    border-width: 7px; 
+    width:100%; 
+    color:orange; border-color: coral; 
+    text-align: center
 }
 
 .header {

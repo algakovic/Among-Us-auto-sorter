@@ -3,14 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <title>Among Us Crew Tournament Randomiser</title>
-  
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Amatic+SC" />
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/main.css')}}"/>
 </head>
-<body style="background: linear-gradient(90deg, rgba(204,148,101,1) 14%, rgba(111,44,125,1) 70%, rgba(56,194,222,1) 98%);
-">
-    
- <div class="login">
-	<h1>Feed Participant Names</h1>
 
+  
+    
+<body>
+  <div class="snowflakes" aria-hidden="true">
+      <div class="snowflake">
+      ❅
+      </div>
+      <div class="snowflake">
+      ❆
+      </div>
+      <div class="snowflake">
+      ❅
+      </div>
+      <div class="snowflake">
+      ❆
+      </div>
+      <div class="snowflake">
+      ❅
+      </div>
+      <div class="snowflake">
+      ❆
+      </div>
+      <div class="snowflake">
+        ❅
+      </div>
+      <div class="snowflake">
+        ❆
+      </div>
+      <div class="snowflake">
+        ❅
+      </div>
+      <div class="snowflake">
+        ❆
+      </div>
+      <div class="snowflake">
+        ❅
+      </div>
+      <div class="snowflake">
+        ❆
+      </div>
+    </div> 
+
+    <img id="site-logo" src="https://i.imgur.com/LQn4BjF.png" alt="logo"/>
+  
+   
+ <div class="homepage">
+	<h1 class='header'>Feed Participant Names</h1>
+     <h2 class='header'>Instructions: </h2>
+     <section>
+            Submit 3 .txt files named standby.txt | participants.txt | admins.txt <br>
+            The files should each contain a list of names with each name on it's own row.<br>
+            No extra spaces or rows. <br><br>
+            participants.txt should have the names of all of the players who are playing (including admins) but not standbys. <br> admins.txt should have just the admins. <br> Standby.txt should have just standby players.
+     </section>
      <!-- Main Input For Receiving .txt files to our randomizer -->
     <form method="POST" action="/" enctype="multipart/form-data">
       <p><input type="file" name="file" multiple></p>

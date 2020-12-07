@@ -2,35 +2,29 @@
    box-sizing : border-box;
 }
 
+#site-logo {
+    position:absolute; 
+    bottom:25vh; 
+    right:25vw;
+    opacity:0.9;
+    height:45vh;
+}
 
+.header {
+   font-family:'Amatic SC', cursive;
+}
+section {
+    font-family: Sans-Serif;
+}
 body {
     height: 100vh;
     overflow: hidden;
     filter: drop-shadow(0 0 10px white);
     margin: 0px; 
     display:flex; justify-content:center; 
-    background: linear-gradient(90deg, rgba(172,116,69,1) 9%, rgba(208,85,50,1) 28%, rgba(123,66,135,1) 61%, rgba(56,194,222,1) 98%);
+    background: linear-gradient(90deg, rgba(204,148,101,1) 14%, rgba(111,44,125,1) 70%, rgba(56,194,222,1) 98%);
 }
 
-.lobby {
-    margin:100px; font-family:'Amatic SC'; font-size:1.5em; 
-}
-
-table {
-    border-style: groove; 
-    border-width: 7px; 
-    width:100%; 
-    color:orange; border-color: coral; 
-    text-align: center
-}
-
-.header {
-    margin-bottom:10px; font-size:2em; font-weight:bold;
-}
-
-.names {
-     padding:30px; font-size:1.5em; 
-}
 
 .snowflake {
   color: #fff;
