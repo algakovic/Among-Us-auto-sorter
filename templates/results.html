@@ -1,0 +1,23 @@
+<html>
+    
+    <head>
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Amatic+SC" />
+    </head>
+    
+<body style="display:flex; justify-content:center; width:100%; background: linear-gradient(90deg, rgba(172,116,69,1) 9%, rgba(208,85,50,1) 28%, rgba(123,66,135,1) 61%, rgba(56,194,222,1) 98%);
+;">
+    {% for lobby in lobbies %}
+        <div style="margin:100px; font-family:'Amatic SC'; font-size:1.5em;">
+            <table style="margin-bottom:10px; width:100%; border-style: groove; border-width: 7px; box-sizing:border-box; font-size:2em; color:orange; font-weight:bold; border-color: coral; text-align: center">
+                <tr><th>Lobby {{loop.index}}</th></tr>
+            </table>
+            <table style="width:100%; padding:30px; border-style: groove; border-width: 7px; box-sizing:border-box; font-size:1.5em; color:orange; border-color: coral; text-align: center">
+        
+              {% for name in lobby %}
+                <tr><td>{{name}}</td></tr>
+              {% endfor %}
+            </table>
+        </div>
+    {% endfor %}
+</body>
+</html>

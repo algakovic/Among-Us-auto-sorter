@@ -2,12 +2,6 @@ from random import shuffle
 
 
 # Import admin and participant data from txt file:
-with open('participants.txt', 'r') as party, open('admins.txt', 'r') as adminlist, open('standby.txt', 'r') as standby:
-    participants = party.read().split('\n')
-    admins = adminlist.read().split('\n')
-    standby = standby.read().split('\n')
-
-
 def among_us_lobby_sorter():
     '''
     admins must be included in the participants list
@@ -18,6 +12,11 @@ def among_us_lobby_sorter():
     into lobbies of 10 and standby.txt players will go 
     into a separate lobby.
     '''
+    
+    with open('uploads/participants.txt', 'r') as party, open('uploads/admins.txt', 'r') as adminlist,   open('uploads/standby.txt', 'r') as standby:
+        participants = party.read().split('\n')
+        admins = adminlist.read().split('\n')
+        standby = standby.read().split('\n')
     
     # Make a copy of participant list for shuffling
     shuffled_participants = participants.copy()
