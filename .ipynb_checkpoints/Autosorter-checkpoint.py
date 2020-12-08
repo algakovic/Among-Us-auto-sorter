@@ -26,18 +26,15 @@ def among_us_lobby_sorter():
     
     n = int(len(participants)/10)
     
-    if n <= 1:
-        lobby1, lobby2 = [], []
-        lobbies = lobby1, lobby2
-    elif n == 2:
+    if n == 2:
         lobby1, lobby2, lobby3 = [], [], []
-        lobbies = lobby1, lobby2, lobby3
+        lobbies = lobby1, lobby2, Standby
     elif n == 3:
         lobby1, lobby2, lobby3, lobby4 = [],[],[],[]
-        lobbies = lobby1, lobby2, lobby3, lobby4
+        lobbies = lobby1, lobby2, lobby3, Standby
     else:
         lobby1, lobby2, lobby3, lobby4, lobby5 = [],[],[],[],[]
-        lobbies = lobby1, lobby2, lobby3, lobby4, lobby5
+        lobbies = lobby1, lobby2, lobby3, lobby4, Standby
 
         
     while len(admins_copy) > 0:

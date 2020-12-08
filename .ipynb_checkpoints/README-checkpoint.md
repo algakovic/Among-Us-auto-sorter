@@ -12,7 +12,7 @@ Changelog -
 
 
 ## Among Us tournaments
-Among us tournament currently hold lobbies of 10 people and points are awarded as participants win lose gain kills or vote correctly/ incorrectly. The code in this notebook and script file is designed to randomly auto-sort a number of participants 10 - 40 into groups of 10 for tournament level games. The output will produce randomised teams of ten players called lobbies.
+Among us tournament currently hold lobbies of 10 people and points are awarded as participants win lose gain kills or vote correctly/ incorrectly. The code in this notebook and script file is designed to randomly auto-sort a number of participants 20 - 40 into groups of 10 for tournament level games. The output will produce randomised teams of ten players labeled lobbies.
 
 ### Usage:
 
