@@ -26,11 +26,11 @@ def among_us_lobby_sorter():
     
     n = int(len(participants)/10)
     
-    
     # No. of lobbies created depends on participants:
     index = list(range(n+1))    
     lobbies = [[] for i in index]
-        
+    
+    #add admins to lobbies:
     while len(admins_copy) > 0:
         for lobby in lobbies[:n]:
             lobby.append(admins_copy.pop())
@@ -44,6 +44,7 @@ def among_us_lobby_sorter():
 
     shuffle(shuffled_participants)
     
+    #add remaining participants to lobbies:
     while len(shuffled_participants) > 0:
         for lobby in lobbies[:n]:
             if len(lobby) <10:
