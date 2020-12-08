@@ -1,5 +1,4 @@
 * /uploads
 *.pyc
 *.log
-*.txt
-
+.ipynb_checkpoints
