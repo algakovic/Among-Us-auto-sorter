@@ -9,6 +9,9 @@ Changelog -
 - The Auto-sorter is now a Flask application that is hosted by Heroku at: http://among-us-tournament-randomiser.herokuapp.com/randomise  
 - The initial code has been modified to only add a participant to a lobby if the lobby is not already full.   
 - The app has its own design and pages uses css styles and html to display the results of the randomiser.
+### Version 0.3  
+Changelog - 
+- No. of lobbies created in Autosorter is now completely dependent on participants entering.
 
 
 ## Among Us tournaments

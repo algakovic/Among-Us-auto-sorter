@@ -26,16 +26,10 @@ def among_us_lobby_sorter():
     
     n = int(len(participants)/10)
     
-    if n == 2:
-        lobby1, lobby2, standby = [], [], []
-        lobbies = lobby1, lobby2, standby
-    elif n == 3:
-        lobby1, lobby2, lobby3, standby,[],[]
-        lobbies = lobby1, lobby2, lobby3, standby
-    else:
-        lobby1, lobby2, lobby3, lobby4, standby = [],[],[],[],[]
-        lobbies = lobby1, lobby2, lobby3, lobby4, standby
-
+    
+    # No. of lobbies created depends on participants:
+    index = list(range(n+1))    
+    lobbies = [[] for i in index]
         
     while len(admins_copy) > 0:
         for lobby in lobbies[:n]:
