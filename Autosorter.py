@@ -14,9 +14,9 @@ def among_us_lobby_sorter():
     '''
     
     with open('uploads/participants.txt', 'r') as party, open('uploads/admins.txt', 'r') as adminlist,   open('uploads/standby.txt', 'r') as standby:
-        participants = party.read().split('\n')
-        admins = adminlist.read().split('\n')
-        standby = standby.read().split('\n') 
+        participants = [s.strip() for s in party.readlines()]
+        admins = [s.strip() for s in party.readlines()]
+        standby = [s.strip() for s in standby.readlines()]
         
     # Make a copy of participant list for shuffling
     shuffled_participants = participants.copy()
@@ -42,10 +42,10 @@ def among_us_lobby_sorter():
     admins = list(filter(None, admins))
       
     
-    if len(admins):
-        for admin in admins:  
-            shuffled_participants.remove(admin)
     
+    for admin in admins:  
+        shuffled_participants.remove(admin)
+
     
     shuffle(shuffled_participants)
     

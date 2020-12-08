@@ -23,15 +23,11 @@ def upload_file():
                 abort(400)
             uploaded_file.save(os.path.join(app.config['UPLOAD_PATH'], filename))
             
-    return redirect(url_for('index'))
-
-
-@app.route('/randomise', methods=['POST'])
-def randomise_participants():
+ 
     lobbies = among_us_lobby_sorter()
-    
+    #clear uplaods folder!
     return render_template('results.html', lobbies=lobbies)
-
+    
 port = int(os.environ.get("PORT", 5000))
 
 if __name__ == '__main__':
