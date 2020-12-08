@@ -29,7 +29,7 @@ def among_us_lobby_sorter():
     if n <= 1:
         lobby1, lobby2 = [], []
         lobbies = lobby1, lobby2
-    elif n = 2:
+    elif n == 2:
         lobby1, lobby2, lobby3 = [], [], []
         lobbies = lobby1, lobby2, lobby3
     elif n == 3:
