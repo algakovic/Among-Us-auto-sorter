@@ -15,9 +15,9 @@ def among_us_lobby_sorter():
     
     with open('uploads/participants.txt', 'r') as party, open('uploads/admins.txt', 'r') as adminlist,   open('uploads/standby.txt', 'r') as standby:
         participants = party.read().split('\n')
-        admins = adminlist.read().split('\n') if len(adminlist.read()) else []
+        admins = adminlist.read().split('\n')
         standby = standby.read().split('\n') 
-    
+        
     # Make a copy of participant list for shuffling
     shuffled_participants = participants.copy()
     
@@ -38,24 +38,35 @@ def among_us_lobby_sorter():
                 continue
             else:
                 break
+   
+    admins = list(filter(None, admins))
+      
+    
+    if len(admins):
+        for admin in admins:  
+            shuffled_participants.remove(admin)
     
     
- 
-    for admin in admins:
-        shuffled_participants.remove(admin)
-
     shuffle(shuffled_participants)
     
+    
+    
     #add remaining participants to lobbies:
+    full = []
     while len(shuffled_participants) > 0:
         for lobby in lobbies[:n]:
-            if len(lobby) <10:
+            if len(admins):
+                if lobby not in full:
+                    lobby.append(shuffled_participants.pop())
+                    if len(lobby) == 10:
+                        full.append(lobby)
+            else:
                 lobby.append(shuffled_participants.pop())
-                if len(shuffled_participants)>0:
-                    continue
-                else:
-                    break
-
+            if len(shuffled_participants) > 0:
+                continue
+            else:
+                break
+            
     # standby participants:
     while len (standby)>0:
         lobbies[n].append(standby.pop())
@@ -63,4 +74,6 @@ def among_us_lobby_sorter():
             continue
         else:
             break
+            
+    lobbies = list(filter(None, lobbies))
     return lobbies
