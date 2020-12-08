@@ -17,7 +17,7 @@ Among us tournament currently hold lobbies of 10 people and points are awarded a
 ### Usage:
 
 Simply visit the link: http://among-us-tournament-randomiser.herokuapp.com/randomise  
-and feed the auto-sorter the three .txt files:
+and feed the auto-sorter the three .txt files which should contain no whitespaces and no extra lines:
 file 1: participants.txt (should have a number of participants divisble by 10)
 file 2: admins.txt (should contain admins or moderators who are also in participants.txt - Not necessary)
 file 3: standby.txt (contains names of players who are standing by for participation - Not necessary)
