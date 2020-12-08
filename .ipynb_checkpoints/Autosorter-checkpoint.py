@@ -23,12 +23,13 @@ def among_us_lobby_sorter():
     
     shuffle(admins)
     admins_copy = admins.copy()
+    
     n = int(len(participants)/10)
     
-    if n == 1:
+    if n <= 1:
         lobby1, lobby2 = [], []
         lobbies = lobby1, lobby2
-    elif n == 2:
+    elif n = 2:
         lobby1, lobby2, lobby3 = [], [], []
         lobbies = lobby1, lobby2, lobby3
     elif n == 3:
@@ -54,11 +55,12 @@ def among_us_lobby_sorter():
     
     while len(shuffled_participants) > 0:
         for lobby in lobbies[:n]:
-            lobby.append(shuffled_participants.pop())
-            if len(shuffled_participants)>0:
-                continue
-            else:
-                break
+            if len(lobby) <10:
+                lobby.append(shuffled_participants.pop())
+                if len(shuffled_participants)>0:
+                    continue
+                else:
+                    break
 
     # standby participants:
     while len (standby)>0:
