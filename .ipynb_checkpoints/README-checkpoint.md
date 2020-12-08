@@ -6,7 +6,7 @@ Changelog -
 - Auto-sorter now automatically reads the length of the participants txt file to calibrate itself.
 ### Version 0.2
 Changelog - 
-- The Auto-sorter is now a Flask application that is hosted by Heroku at: http://among-us-tournament-randomiser.herokuapp.com/randomise  
+- The Auto-sorter is now a Flask application that is hosted by Heroku at: https://among-us-tournament-randomiser.herokuapp.com/  
 - The initial code has been modified to only add a participant to a lobby if the lobby is not already full.   
 - The app has its own design and pages uses css styles and html to display the results of the randomiser.
 ### Version 0.3  
@@ -19,11 +19,11 @@ Among us tournament currently hold lobbies of 10 people and points are awarded a
 
 ### Usage:
 
-Simply visit the link: http://among-us-tournament-randomiser.herokuapp.com/randomise  
-and feed the auto-sorter the three .txt files which should contain no whitespaces and no extra lines:
-file 1: participants.txt (should have a number of participants divisble by 10)
-file 2: admins.txt (should contain admins or moderators who are also in participants.txt - Not necessary)
-file 3: standby.txt (contains names of players who are standing by for participation - Not necessary)
+Visit the link: https://among-us-tournament-randomiser.herokuapp.com/ and feed the auto-sorter  
+the three .txt files which should contain no whitespaces and no extra lines:
+file 1: participants.txt (must have a number of participants divisible by 10)
+file 2: admins.txt (should contain admins or moderators who are also in participants.txt - can be blank)
+file 3: standby.txt (contains names of players who are standing by for participation - can be blank)
 
 The code in the Jupyter notebook can be run to the same effect, if you prefer.
 
