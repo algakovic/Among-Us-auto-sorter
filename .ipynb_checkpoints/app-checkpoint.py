@@ -31,3 +31,5 @@ def randomise_participants():
     lobbies = among_us_lobby_sorter()
     
     return render_template('results.html', lobbies=lobbies)
+
+app.run()
