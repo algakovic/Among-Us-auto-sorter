@@ -26,6 +26,9 @@ Changelog - 09.12.2020
 - Uploads folder is cleared after showing results. People now no longer see other names from other uploads.
 - Update Main.html instructions to explain how to select multiple files.
 - Style code blocks on instructions page for .txt files
+#### Version 1
+Changelog - 09.12.2020
+- Switch production web server to gunicorn
 
 ## Among Us tournaments
 Among us tournament currently hold lobbies of 10 people and points are awarded as participants win lose gain kills or vote correctly/ incorrectly. The code in this notebook and script file is designed to randomly auto-sort a number of participants 20 - 40 into groups of 10 for tournament level games. The output will produce randomised teams of ten players labeled lobbies.
