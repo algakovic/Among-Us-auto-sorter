@@ -2,6 +2,12 @@
    box-sizing : border-box;
 }
 
+
+code {
+    font-family:monospace;
+    background-color: rgba(1, 1, 1, 0.1);
+}
+
 #site-logo {
     position:absolute; 
     bottom:15vh; 
