@@ -35,6 +35,7 @@ Changelog - 09.12.2020
 - Participants no longer need to be a number divisible by 10. 
 - The function auto-sorts last participants that do not make a full lobby into a standby group.
 - Standby group is now clearly labeled in the results page for the app.
+- Main.html no longer instructs users to make participants.txt divisible by 10
 
 
 ## Among Us tournaments
