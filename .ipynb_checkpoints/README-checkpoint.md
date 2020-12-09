@@ -26,9 +26,16 @@ Changelog - 09.12.2020
 - Uploads folder is cleared after showing results. People now no longer see other names from other uploads.
 - Update Main.html instructions to explain how to select multiple files.
 - Style code blocks on instructions page for .txt files
-#### Version 1
+## Version 1
 Changelog - 09.12.2020
 - Switch production web server to gunicorn
+### Version 1.1
+Changelog - 09.12.2020
+- Standby.txt file is no longer necessary. 
+- Participants no longer need to be a number divisible by 10. 
+- The function auto-sorts last participants that do not make a full lobby into a standby group.
+- Standby group is now clearly labeled in the results page for the app.
+
 
 ## Among Us tournaments
 Among us tournament currently hold lobbies of 10 people and points are awarded as participants win lose gain kills or vote correctly/ incorrectly. The code in this notebook and script file is designed to randomly auto-sort a number of participants 20 - 40 into groups of 10 for tournament level games. The output will produce randomised teams of ten players labeled lobbies.
@@ -37,9 +44,7 @@ Among us tournament currently hold lobbies of 10 people and points are awarded a
 
 Visit the link: https://among-us-tournament-randomiser.herokuapp.com/ and feed the auto-sorter  
 the three .txt files which should contain no whitespaces and no extra lines:
-file 1: participants.txt (must have a number of participants divisible by 10)
+file 1: participants.txt 
 file 2: admins.txt (should contain admins or moderators who are also in participants.txt - can be blank)
-file 3: standby.txt (contains names of players who are standing by for participation - can be blank)
-
 The code in the Jupyter notebook can be run to the same effect, if you prefer.
 

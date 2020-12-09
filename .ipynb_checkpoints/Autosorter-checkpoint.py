@@ -5,18 +5,23 @@ from random import shuffle
 def among_us_lobby_sorter():
     '''
     * Admins must be included in the participants list. Their names must match like for like.
-    * The number of participants must be divisible by 10
     Having even number of admins is not necessary but a pair for each lobby at least is good.
 
     The auto-sorter will sort participants 
-    into lobbies of 10 and standby.txt players will go 
-    into a separate lobby.
+    into lobbies of 10 and remaining players will go into a standby lobby
     '''
     
-    with open('uploads/participants.txt', 'r') as party, open('uploads/admins.txt', 'r') as adminlist,   open('uploads/standby.txt', 'r') as standby:
+    with open('uploads/participants.txt', 'r') as party, open('uploads/admins.txt', 'r') as adminlist:
         participants = [s.strip() for s in party.readlines()]
-        admins = [s.strip() for s in adminlist.readlines()]
-        standby = [s.strip() for s in standby.readlines()]
+        admins = [s.strip() for s in adminlist.readlines()]    
+    
+    standby_index = len(participants)%10
+    if standby_index:
+        #slice the last x participants where x is the modulo result above and place in standby list:
+        standby = participants[-standby_index:]
+        #remove standby from participants list:
+        del participants[-standby_index:]
+        print(len(standby))
     
     # Make a copy of admin and participants list and shuffle
     shuffled_participants = participants.copy()
@@ -48,24 +53,25 @@ def among_us_lobby_sorter():
     full = []
     while len(shuffled_participants) > 0:
         for lobby in lobbies[:n]:
-            if len(admins):
-                if lobby not in full:
-                    lobby.append(shuffled_participants.pop())
-                    if len(lobby) == 10:
-                        full.append(lobby)
-            else:
+            if lobby not in full:
                 lobby.append(shuffled_participants.pop())
-            if len(shuffled_participants) > 0:
-                continue
-            else:
-                break
-            
-    # add standby participants:
-    while len (standby)>0:
-        lobbies[n].append(standby.pop())
-        if len(standby)>0:
+                if len(lobby) == 10:
+                    full.append(lobby)
+                else: 
+                    continue
+
+        if len(shuffled_participants) > 0:
             continue
         else:
             break
             
+    if standby_index:
+        # add standby participants:
+        while len (standby)>0:
+            lobbies[n].append(standby.pop())
+            if len(standby)>0:
+                continue
+            else:
+                break
+
     return lobbies
