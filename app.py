@@ -25,7 +25,9 @@ def upload_file():
             
  
     lobbies = among_us_lobby_sorter()
-    #clear uplaods folder!
+    os.system('rm uploads/admins.txt')
+    os.system('rm uploads/participants.txt')
+    os.system('rm uploads/standby.txt')
     return render_template('results.html', lobbies=lobbies)
     
 port = int(os.environ.get("PORT", 5000))
